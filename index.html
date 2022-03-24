@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- code by webdevtrick ( https://webdevtrick.com ) -->
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>NSS menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Aldrich&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menu.css">
+</head>
+
+<body>
+
+    <button type="button" class="menu-button menu-toggle" aria-label="Click to open menu"></button>
+
+
+    <div class="menu main-menu-switch">
+        <div class="maiin-menu">
+            <div class="items"></div>
+            <div class="content">
+                <a href="#" class="btn-link">Our projects</a>
+            </div>
+        </div>
+        <div class="maiin-menu">
+            <div class="items"></div>
+            <div class="content">
+                <a href="#" class="btn-link">Our Departments</a>
+            </div>
+        </div>
+        <div class="maiin-menu">
+            <div class="items"></div>
+            <div class="content">
+                <nav class="bundle">
+                    <a class="inside-link" href="#">Our Team</a>
+
+                </nav>
+            </div>
+        </div>
+        <div class="maiin-menu">
+            <div class="items"></div>
+            <div class="content">
+                <a href="#" class="btn-link">Our vision</a>
+            </div>
+        </div>
+        <div class="maiin-menu">
+            <div class="items"></div>
+            <div class="content">
+                <a href="https://webdevtrick.com" class="btn-link">Events organized</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menu = document.querySelector('.main-menu-switch');
+        const menuTrigger = document.querySelectorAll('.menu-toggle');
+        menuTrigger.forEach(btn => {
+            btn.addEventListener('click', function() {
+                menuTrigger.forEach(b => {
+                    b.classList.toggle('toggle-switch-menu-open');
+                });
+                menu.classList.toggle('toggle-switch');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
